@@ -1,19 +1,23 @@
-import React from 'react'
-import GridLayout from 'react-grid-layout';
+import React, { useState, useEffect } from 'react'
+import GridLayout from 'react-grid-layout'
+import _ from 'lodash'
 
 const Test = () => {
-  // layout is an array of objects, see the demo for more complete usage
+
   const layout = [
-    { i: 'a', x: 0, y: 0, w: 1, h: 2, static: true },
-    { i: 'b', x: 1, y: 0, w: 3, h: 2, minW: 2, maxW: 4 },
-    { i: 'c', x: 4, y: 0, w: 1, h: 2 }
+    { i: '1', x: 0, y: 0, w: 1, h: 1 },
+    { i: '2', x: 1, y: 0, w: 3, h: 2 },
+    { i: '3', x: 4, y: 0, w: 1, h: 2 }
   ];
+
   return (
-    <GridLayout className="layout" layout={layout} cols={12} rowHeight={30} width={1200}>
-      <div key="a" className='bg-gray-300'>a</div>
-      <div key="b" className='bg-gray-300'>b</div>
-      <div key="c" className='bg-gray-300'>c</div>
-    </GridLayout>
+    <div className='max-w-7xl mx-auto mt-10'>
+      <GridLayout className="layout bg-teal-100" layout={layout} cols={12} rowHeight={60} width={1280} rowHeight={85} >
+        <div key="1" className='bg-teal-300 active:bg-teal-400'>1</div>
+        <div key="2" className='bg-teal-300 active:bg-teal-400'>2</div>
+        <div key="3" className='bg-teal-300 active:bg-teal-400'>3</div>
+      </GridLayout>
+    </div >
   )
 }
 
