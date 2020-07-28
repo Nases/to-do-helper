@@ -11,7 +11,7 @@ const Test = () => {
   ];
 
   return (
-    <div className='max-w-7xl mx-auto mt-10'>
+    <div className='max-w-7xl mx-auto mt-10 border-dashed border-4 border-gray-600'>
       <GridLayout className="layout bg-teal-100" layout={layout} cols={12} rowHeight={60} width={1280} rowHeight={85} >
         <div key="1" className='bg-teal-300 active:bg-teal-400'>1</div>
         <div key="2" className='bg-teal-300 active:bg-teal-400'>2</div>
